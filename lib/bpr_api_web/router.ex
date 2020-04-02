@@ -9,7 +9,9 @@ defmodule BprApiWeb.Router do
     get "/", WelcomeController, :index
   end
 
-  scope "/api", BprApiWeb do
+  scope "/api/v1", BprApiWeb do
     pipe_through :api
+
+    get "/status/nodes", StatusController, :nodes
   end
 end
