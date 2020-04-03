@@ -13,5 +13,7 @@ defmodule BprApiWeb.Router do
     pipe_through :api
 
     get "/status/nodes", StatusController, :nodes
+    get "/settings/set", SettingsController, :set
+    get "/settings/get", SettingsController, :get
   end
 end
